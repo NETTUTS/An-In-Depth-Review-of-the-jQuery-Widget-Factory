@@ -1,0 +1,121 @@
+.bullet-chart { font-size: 16px; -webkit-user-select: none; }
+
+.bullet-chart .chart-container {
+  height: 30px;
+  background: #EEE;
+  position: relative;
+  margin-left: 2.1em;
+}
+
+/* Bar */
+.bullet-chart .bar {
+  background: #777;
+  position: absolute;
+
+  /* Vertical centering */
+  height: 10px;
+  top: 50%;
+  margin-top: -5px;
+}
+
+
+/* Marker */
+.bullet-chart .marker {
+  background: #555;
+  width: 2px;
+  height: 20px;
+  position: absolute;
+  left: 250px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.bullet-chart .red { background: #cd6668; }
+.bullet-chart .green { background: #72cd84; }
+.bullet-chart .blue { background: #64a0cb; }
+.bullet-chart .purple { background: #a77cdb; }
+.bullet-chart .orange { background: #ffb95e; }
+.bullet-chart .cyan { background: #a0e2ff; }
+
+/* Ticks */
+.bullet-chart .tick-bar {
+  position: relative;
+  top: 30px;
+  border-top: 1px solid #AAA;
+}
+
+.bullet-chart .tick-bar .tick {
+  position: absolute;
+  width: 1px;
+  height: 6px;
+  top: -1px;
+  background: #AAA;
+}
+
+.bullet-chart .tick-bar .tick-label {
+  text-align: center;
+  position: absolute;
+  font-size: 0.6em;
+  width: 2.1em;
+  margin-left: -1.05em;
+  top: 5px;
+  color: #AAA;
+}
+
+/* Legend */
+.bullet-chart .legend {
+  margin: 0 0 1em 2.1em;
+  border: 1px solid #EEE;
+  padding: 0.5em 0 0 0.5em;
+  max-width: 300px;
+}
+
+.bullet-chart .legend .legend-item {
+  display: inline-block;
+  margin: 0 0.5em 0.5em 0;
+  background: #FFE;
+  padding: 0 5px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.legend-item .legend-symbol {
+  position: static;
+  margin: 0px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.legend-item .legend-symbol.marker {
+  height: 12px;
+  width: 2px;
+}
+
+.legend-item .legend-symbol.bar {
+  height: 12px;
+  width: 7px;
+}
+
+.legend-item .legend-label {
+  font-size: 0.6em;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.fade { opacity: 0.5; }
+
+/* ------------------ controls --------------- */
+.chart {
+  padding-left: 300px;
+}
+.controls {
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  width: 300px;
+  top: 0;
+}
+
+.controls li {
+  padding: 0.5em 0 0 0;
+}
