@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BulletChart: A jQuery Widget</title>
+  <meta name="description" content="BulletChart: A jQuery Widget">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="jquery-ui-1.9.2.custom.css?">
+  <link rel="stylesheet" href="jquery.bulletchart.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<div class="chart"></div>
+
+<ul class="controls">
+  <li>
+    <span>Show Legend</span>
+    <input type="checkbox" data-prop="legend" checked="checked">
+  </li>
+
+  <li>
+    <input type="button" value="Set Random Size" data-prop="size">
+  </li>
+
+  <li>
+    <input type="button" value="Generate Random Markers" data-prop="markers">
+  </li>
+
+  <li>
+    <input type="button" value="Generate Random Bars" data-prop="bars">
+  </li>
+
+  <li>
+    <input type="button" value="Generate Random Ticks" data-prop="ticks">
+  </li>
+
+</ul>
+<script src="jquery-1.8.3.js"></script>
+<script src="jquery-ui.custom.js"></script>
+<script src="jquery.bulletchart.js"></script>
+<script type="text/javascript">
+  $('.chart').bulletchart2({
+    size: 86,
+    bars: [
+      { title: 'Projected Target', value: 75, css: '' },
+      { title: 'Actual Target', value: 50, css: 'blue' }
+    ],
+    markers: [
+      { title: 'Green Line', value: 80, css: 'green' },
+      { title: 'Minimum Threshold', value: 50, css: 'red' }
+    ],
+
+    ticks: [0, 25, 50, 75, 100]
+  });
+</script>
+<script type="text/javascript">
+  function randomColor() {
+    var colors = ['red', 'green', 'blue', 'purple', 'orange', 'cyan'],
+      index = Math.floor(Math.random() * colors.length);
+
+    return colors[index];
+  }
+
+  function randomList() {
+    var count = 5 + Math.ceil(Math.random() * 5),
+      items = [];
+    for (var i = 0; i < count; i++) {
+      var val = Math.floor(Math.random() * 100);
+      items.push(val);
+    }
+
+    return items;
+
+  }
+  $('.controls').on('click', 'input', function () {
+    var input = $(this),
+      prop = input.attr('data-prop'),
+      chart = $('.chart'),
+      propMap = {
+        markers: function () {
+          return $.map(randomList(), function (x) {
+            return { title: 'Random Marker-' + x, value: x, css: randomColor()};
+          });
+        },
+        ticks: function () {
+          return randomList();
+        },
+        bars: function () {
+          return $.map(randomList(), function (x) {
+            return { title: 'Random Bar-' + x, value: x, css: randomColor()};
+          });
+        },
+        size: function () {
+          return Math.random() * 100;
+        },
+        legend: function () {
+          return input.is(':checked');
+        }
+      };
+
+    var newVal = propMap[prop]();
+    chart.bulletchart2('option', prop, newVal);
+  });
+</script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
