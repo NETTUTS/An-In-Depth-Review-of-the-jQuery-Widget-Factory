@@ -2,7 +2,7 @@
 
 You should read the source in this repo alongwith the article on [NetTuts+](http://net.tutsplus.com/tutorials/javascript-ajax/an-in-depth-review-of-jquerys-widget-factory/)
 
-![Bullet Chart](bullet.png)
+![Bullet Chart](https://github.com/NETTUTS/An-In-Depth-Review-of-the-jQuery-Widget-Factory/blob/master/bullet.png)
 
 Some of the highlights from this article include:
 
