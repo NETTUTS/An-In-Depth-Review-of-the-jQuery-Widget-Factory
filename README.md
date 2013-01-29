@@ -2,6 +2,8 @@
 
 You should read the source in this repo alongwith the article on [NetTuts+](http://net.tutsplus.com/tutorials/javascript-ajax/an-in-depth-review-of-jquerys-widget-factory/)
 
+![Bullet Chart](bullet.png)
+
 Some of the highlights from this article include:
 
 - Lifecyle of jQuery Widgets
@@ -9,4 +11,4 @@ Some of the highlights from this article include:
 - The BulletChart example to explain the API
 - Extending jQuery Widgets
 - Handling events 
-- Some tips about jQuery Widgets
+- Advanced tips about jQuery Widgets
