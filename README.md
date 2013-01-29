@@ -9,4 +9,4 @@ Some of the highlights from this article include:
 - The BulletChart example to explain the API
 - Extending jQuery Widgets
 - Handling events 
-- Some tips about jQuery Widgets
+- Advanced tips about jQuery Widgets
