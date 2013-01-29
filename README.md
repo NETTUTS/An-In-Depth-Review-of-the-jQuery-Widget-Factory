@@ -8,7 +8,7 @@ Some of the highlights from this article include:
 
 - Lifecyle of jQuery Widgets
 - Widget Factory API to handle lifecycle events: `_create`, `_init`, `_setOption`, `_destroy`
-- The BulletChart example to explain the API
+- The __BulletChart__ example to explain the API
 - Extending jQuery Widgets
 - Handling events 
 - Advanced tips about jQuery Widgets
