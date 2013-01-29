@@ -5,9 +5,8 @@ You should read the source in this repo alongwith the article on [NetTuts+](http
 Some of the highlights from this article include:
 
 - Lifecyle of jQuery Widgets
-- Widget Factory API to handle lifecycle events
+- Widget Factory API to handle lifecycle events: `_create`, `_init`, `_setOption`, `_destroy`
 - The BulletChart example to explain the API
-- Covers `_create`, `_init`, `_setOption`, `_destroy`
 - Extending jQuery Widgets
 - Handling events 
 - Some tips about jQuery Widgets
